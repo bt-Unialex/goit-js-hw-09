@@ -28,7 +28,10 @@ feedbackForm.addEventListener('submit', event => {
     console.table(formData);
     feedbackForm.reset();
     localStorage.removeItem('feedback-form-state');
+    formData.email = '';
+    formData.message = '';
   } else {
     alert('Fill please all fields');
   }
+  console.table(formData);
 });
